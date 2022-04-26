@@ -8,9 +8,14 @@
 Please refactor the classes `Car`/`Cat`/`Fish`/`Plane`/`Bird`/`Butterfly` in [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) with interfaces and abstract classes.
 Don't change the functionality of the classes. Understand the role of interfaces and abstract classes.
 
+After refactoring, please try to simplify these messy method `everyFlyableObjectFly()`/`everySoundMakerMakeSound()`/`everyAnimalBreath()`, and appreciate the benefits of polymorphism.
+
+
 The required class hierarchy is shown as follows.
 The circle I represents an interface, the solid circle C represents a class, the semi-hollow circle C represents an abstract class,
 the green dotted line represents implementing an interface, the green solid line represents inheriting from a parent class.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 - You can accomplish this challenge via any way below:
   - Recommended for beginners: run `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` to download the code,
@@ -41,7 +46,12 @@ Any changes to files other than the following files will be rejected:**
 
 请使用接口和抽象类重构[src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java)中的`Car`/`Cat`/`Fish`/`Plane`/`Bird`/`Butterfly`类，不改变其功能，体会接口和抽象类的作用。
 
+在完成重构后，请尝试简化啰嗦的`everyFlyableObjectFly()`/`everySoundMakerMakeSound()`/`everyAnimalBreath()`方法，体会多态的好处。
+
+
 要求的继承体系如图所示。其中，圆圈I代表接口，实心圆圈C代表类，半空心圆圈C代表抽象类，绿色虚线代表实现接口，绿色实现代表继承父类。
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 - 你可以使用以下任意一种方法完成挑战：
   - 初学者推荐：运行`git clone https://git.bytelegend.com/ByteLegendQuest/java-interface-abstract-class-in-action`将代码下载到本地，在本地使用IDE调试完成后复制到网页编辑器里提交。
@@ -71,7 +81,11 @@ Any changes to files other than the following files will be rejected:**
 
 請使用接口和抽像類重構[src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java)中的`Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly`類。不要更改類的功能。了解接口和抽像類的作用。
 
+重構之後，請盡量簡化這些亂七八糟的方法`everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` ，體會多態的好處。
+
 所需的類層次結構如下所示。圓圈I代表接口，實心圓C代表類，半空心圓C代表抽像類，綠色虛線代表實現接口，綠色實線代表從父類繼承。
+
+![微升](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   您可以通過以下任何方式完成此挑戰：
     -   推薦給初學者：運行`git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action`下載代碼，在本地IDE中完成挑戰，然後復制/粘貼/提交答案網頁編輯器。
@@ -100,7 +114,11 @@ Interfaz y clase abstracta en acción
 
 Refactorice las clases `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` en [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) con interfaces y clases abstractas. No cambie la funcionalidad de las clases. Comprender el papel de las interfaces y las clases abstractas.
 
+Después de la refactorización, intente simplificar estos métodos complicados `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` , y aprecie los beneficios del polimorfismo.
+
 La jerarquía de clases requerida se muestra a continuación. El círculo I representa una interfaz, el círculo sólido C representa una clase, el círculo semihueco C representa una clase abstracta, la línea punteada verde representa la implementación de una interfaz, la línea sólida verde representa la herencia de una clase principal.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Puede lograr este desafío de cualquier manera a continuación:
     -   Recomendado para principiantes: ejecute `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` para descargar el código, finalice el desafío en su IDE local, luego copie/pegue/envíe la respuesta en Editor web.
@@ -124,12 +142,16 @@ Si necesita ayuda, no dude en unirse a la [comunidad de Discord](https://discord
 <details>
 <summary>العربية</summary>
 
-واجهة وفئة الملخص في العمل
---------------------------
+واجهة ودرجة الملخص في العمل
+---------------------------
 
-يرجى إعادة تشكيل الفئات `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` في [src / main / java / com / bytelegend / World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) باستخدام واجهات وفصول مجردة. لا تغير وظائف الفئات. فهم دور الواجهات والفئات المجردة.
+يرجى إعادة بناء الفئات `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` في [src / main / java / com / bytelegend / World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) باستخدام واجهات وفصول مجردة. لا تغير وظائف الفئات. فهم دور الواجهات والفئات المجردة.
+
+بعد إعادة البناء ، يرجى محاولة تبسيط هذه الطريقة الفوضوية `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` وتقدير فوائد تعدد الأشكال.
 
 يتم عرض التسلسل الهرمي المطلوب للفئة على النحو التالي. تمثل الدائرة I واجهة ، وتمثل الدائرة الصلبة C فئة ، وتمثل الدائرة شبه المجوفة C فئة مجردة ، ويمثل الخط المنقط الأخضر تنفيذ واجهة ، ويمثل الخط الصلب الأخضر الموروث من فئة أصل.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   يمكنك إنجاز هذا التحدي بأي طريقة أدناه:
     -   موصى به للمبتدئين: قم بتشغيل `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` لتنزيل الكود ، وإنهاء التحدي في IDE المحلي الخاص بك ، ثم نسخ / لصق / إرسال الإجابة في محررشبكة.
@@ -158,14 +180,18 @@ Interface e classe abstrata em ação
 
 Por favor refatore as classes `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` em [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) com interfaces e classes abstratas. Não altere a funcionalidade das classes. Compreender o papel das interfaces e classes abstratas.
 
+Após a refatoração, tente simplificar esses métodos `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` e aprecie os benefícios do polimorfismo.
+
 A hierarquia de classe necessária é mostrada a seguir. O círculo I representa uma interface, o círculo sólido C representa uma classe, o círculo semi-oco C representa uma classe abstrata, a linha pontilhada verde representa a implementação de uma interface, a linha sólida verde representa a herança de uma classe pai.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Você pode realizar este desafio de qualquer maneira abaixo:
     -   Recomendado para iniciantes: execute `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` para baixar o código, conclua o desafio em seu IDE local e copie/cole/envie a resposta em editor web.
-        -   Se você não sabe como, você pode clicar em [importar projeto para IDEA](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/docs/en/clone-and-import.md) / [importar projeto para VSCode](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/docs/en/clone-and-import-vscode.md) .
+        -   Se você não sabe como, você pode clicar em [import project into IDEA](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/docs/en/clone-and-import.md) / [import project into VSCode](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/docs/en/clone-and-import-vscode.md) .
         -   Antes de enviar seu código, é melhor você executar `mvn verify` localmente para economizar tempo. Não sei como? Consulte [verificar localmente em IDEA](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/docs/en/run-mvn-verify-idea.md) / [verificar localmente em VSCode](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/docs/en/run-mvn-verify-vscode.md) .
     -   Muito não recomendado: você pode [clicar aqui para baixar o código zipado](https://codeload.github.com/ByteLegendQuest/java-interface-abstract-class-in-action/zip/refs/heads/main) se não gostar das operações do `git` .
-    -   Ou: se você estiver confiante o suficiente para escrever código diretamente no editor web, vá em frente.
+    -   Ou: se você estiver confiante o suficiente para escrever código diretamente no editor da web, vá em frente.
     -   Ou: se você estiver familiarizado com o GitHub, você pode bifurcar [o repo](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action) , finalizar o desafio e criar um pull request.
 -   O bot verificará seu PR e informará se você cumprir o desafio.
 -   Volte para [ByteLegend](https://bytelegend.com) e continue sua jornada de herói.
@@ -187,7 +213,11 @@ Antarmuka dan Kelas Abstrak dalam Tindakan
 
 Harap perbaiki kelas `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` -kupu di [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) dengan antarmuka dan kelas abstrak. Jangan ubah fungsionalitas kelas. Memahami peran antarmuka dan kelas abstrak.
 
+Setelah pemfaktoran ulang, coba sederhanakan metode berantakan ini `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` , dan hargai manfaat polimorfisme.
+
 Hirarki kelas yang diperlukan ditunjukkan sebagai berikut. Lingkaran I mewakili antarmuka, lingkaran padat C mewakili kelas, lingkaran setengah berongga C mewakili kelas abstrak, garis putus-putus hijau mewakili implementasi antarmuka, garis hijau solid mewakili pewarisan dari kelas induk.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Anda dapat menyelesaikan tantangan ini melalui cara apa pun di bawah ini:
     -   Direkomendasikan untuk pemula: jalankan `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` untuk mengunduh kode, selesaikan tantangan di IDE lokal Anda, lalu salin/tempel/kirim jawabannya di editor web.
@@ -216,7 +246,11 @@ Interface et classe abstraite en action
 
 Veuillez refactoriser les classes `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` dans [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) avec des interfaces et des classes abstraites. Ne modifiez pas la fonctionnalité des classes. Comprendre le rôle des interfaces et des classes abstraites.
 
+Après la refactorisation, essayez de simplifier ces méthodes désordonnées `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` , et appréciez les avantages du polymorphisme.
+
 La hiérarchie de classes requise est illustrée ci-dessous. Le cercle I représente une interface, le cercle plein C représente une classe, le cercle semi-creux C représente une classe abstraite, le trait pointillé vert représente l'implémentation d'une interface, le trait plein vert représente l'héritage d'une classe mère.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Vous pouvez accomplir ce défi de n'importe quelle manière ci-dessous:
     -   Recommandé pour les débutants : lancez `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` pour télécharger le code, terminez le défi dans votre IDE local, puis copiez/collez/soumettez la réponse dans éditeur web.
@@ -245,7 +279,11 @@ Si vous avez besoin d'aide, n'hésitez pas à rejoindre la [communauté Discord]
 
 インターフェイスと抽象クラスを使用して、 [src / main / java / com / bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java)のクラス`Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly`をリファクタリングしてください。クラスの機能を変更しないでください。インターフェイスと抽象クラスの役割を理解します。
 
+リファクタリング後、これらの厄介なメソッド`everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` （）を単純化して、ポリモーフィズムの利点を理解してください。
+
 必要なクラス階層は次のとおりです。円Iはインターフェースを表し、実線の円Cはクラスを表し、半中空の円Cは抽象クラスを表し、緑色の点線はインターフェースの実装を表し、緑色の実線は親クラスからの継承を表します。
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   この課題は、以下のいずれかの方法で達成できます。
     -   初心者に推奨： `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action`を実行してコードをダウンロードし、ローカルIDEでチャレンジを終了してから、で回答をコピー/貼り付け/送信します。 Webエディター。
@@ -274,7 +312,11 @@ Si vous avez besoin d'aide, n'hésitez pas à rejoindre la [communauté Discord]
 
 Пожалуйста, рефакторинг классов `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` в [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) с интерфейсами и абстрактными классами. Не изменяйте функциональность классов. Понимать роль интерфейсов и абстрактных классов.
 
+После рефакторинга попробуйте упростить эти запутанные методы `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` и оцените преимущества полиморфизма.
+
 Требуемая иерархия классов показана ниже. Круг I представляет интерфейс, сплошной круг C представляет класс, полупустой круг C представляет абстрактный класс, зеленая пунктирная линия представляет реализацию интерфейса, зеленая сплошная линия представляет наследование от родительского класса.
+
+![умл](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Вы можете выполнить эту задачу любым способом, указанным ниже:
     -   Рекомендуется для начинающих: запустите `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` , чтобы загрузить код, выполните задание в локальной среде IDE, затем скопируйте/вставьте/отправьте ответ в веб-редактор.
@@ -303,7 +345,11 @@ Schnittstelle und abstrakte Klasse in Aktion
 
 Bitte überarbeiten Sie die Klassen `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` in [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) mit Schnittstellen und abstrakten Klassen. Ändern Sie nicht die Funktionalität der Klassen. Verstehen Sie die Rolle von Schnittstellen und abstrakten Klassen.
 
+Versuchen Sie nach dem Refactoring, diese chaotischen Methoden `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` zu vereinfachen, und schätzen Sie die Vorteile der Polymorphie.
+
 Die erforderliche Klassenhierarchie wird wie folgt dargestellt. Der Kreis I stellt eine Schnittstelle dar, der durchgezogene Kreis C stellt eine Klasse dar, der halbhohle Kreis C stellt eine abstrakte Klasse dar, die grüne gepunktete Linie stellt die Implementierung einer Schnittstelle dar, die grüne durchgezogene Linie stellt das Erben von einer Elternklasse dar.
+
+![ähm](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Sie können diese Herausforderung auf eine der folgenden Arten meistern:
     -   Empfohlen für Anfänger: Führen Sie `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` aus, um den Code herunterzuladen, beenden Sie die Herausforderung in Ihrer lokalen IDE und kopieren/fügen Sie dann die Antwort ein/senden Sie sie ein Web-Editor.
@@ -332,7 +378,11 @@ Wenn Sie Hilfe benötigen, können Sie sich gerne der [Discord Community](https:
 
 인터페이스 및 추상 클래스를 사용하여 [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) 의 `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` 클래스를 리팩토링하십시오. 클래스의 기능을 변경하지 마십시오. 인터페이스와 추상 클래스의 역할을 이해합니다.
 
+리팩토링 후 이 지저분한 메소드 `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` ) 를 단순화하고 다형성의 이점을 높이 평가하십시오.
+
 필요한 클래스 계층은 다음과 같습니다. 원 I은 인터페이스를 나타내고, 실선 원 C는 클래스를 나타내고, 반 중공 원 C는 추상 클래스를 나타내고, 녹색 점선은 인터페이스 구현을 나타내고, 녹색 실선은 부모 클래스에서 상속을 나타냅니다.
+
+![음](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   아래 방법을 통해 이 챌린지를 완료할 수 있습니다.
     -   초보자에게 권장: `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` 을 실행하여 코드를 다운로드하고 로컬 IDE에서 챌린지를 완료한 다음 복사/붙여넣기/제출 웹 에디터.
@@ -361,7 +411,11 @@ Interfaccia e classe astratta in azione
 
 Per favore refactoring delle classi `Car` / `Cat` / `Fish` / `Plane` / `Bird` / `Butterfly` in [src/main/java/com/bytelegend/World.java](https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action/blob/main/src/main/java/com/bytelegend/World.java) con interfacce e classi astratte. Non modificare la funzionalità delle classi. Comprendere il ruolo delle interfacce e delle classi astratte.
 
-La gerarchia di classi richiesta è mostrata come segue. Il cerchio I rappresenta un'interfaccia, il cerchio pieno C rappresenta una classe, il cerchio semi-cavo C rappresenta una classe astratta, la linea tratteggiata verde rappresenta l'implementazione di un'interfaccia, la linea continua verde rappresenta l'ereditarietà da una classe genitore.
+Dopo il refactoring, prova a semplificare questi metodi disordinati `everyFlyableObjectFly()` / `everySoundMakerMakeSound()` / `everyAnimalBreath()` e apprezza i vantaggi del polimorfismo.
+
+La gerarchia delle classi richiesta è mostrata come segue. Il cerchio I rappresenta un'interfaccia, il cerchio pieno C rappresenta una classe, il cerchio semi-cavo C rappresenta una classe astratta, la linea tratteggiata verde rappresenta l'implementazione di un'interfaccia, la linea continua verde rappresenta l'ereditarietà da una classe genitore.
+
+![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
 -   Puoi portare a termine questa sfida in qualsiasi modo di seguito:
     -   Consigliato per i principianti: esegui `git clone https://github.com/ByteLegendQuest/java-interface-abstract-class-in-action` per scaricare il codice, completa la sfida nel tuo IDE locale, quindi copia/incolla/invia la risposta in editore web.

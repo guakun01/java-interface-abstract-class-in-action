@@ -13,6 +13,11 @@ public class World {
                     new Plane(),
                     new Butterfly());
 
+    /**
+     * After refactoring, please try to simplify these messy method
+     * `everyFlyableObjectFly()`/`everySoundMakerMakeSound()`/`everyAnimalBreath()`, and appreciate
+     * the benefits of polymorphism.
+     */
     public static void everyFlyableObjectFly() {
         for (Object obj : objects) {
             if (obj instanceof Butterfly) {
@@ -25,6 +30,11 @@ public class World {
         }
     }
 
+    /**
+     * After refactoring, please try to simplify these messy method
+     * `everyFlyableObjectFly()`/`everySoundMakerMakeSound()`/`everyAnimalBreath()`, and appreciate
+     * the benefits of polymorphism.
+     */
     public static void everySoundMakerMakeSound() {
         for (Object obj : objects) {
             if (obj instanceof Cat) {
@@ -37,6 +47,11 @@ public class World {
         }
     }
 
+    /**
+     * After refactoring, please try to simplify these messy method
+     * `everyFlyableObjectFly()`/`everySoundMakerMakeSound()`/`everyAnimalBreath()`, and appreciate
+     * the benefits of polymorphism.
+     */
     public static void everyAnimalBreath() {
         for (Object obj : objects) {
             if (obj instanceof Cat) {
@@ -64,7 +79,7 @@ interface SoundMaker {
     void makeSound();
 }
 
-abstract class Pet {}
+class Pet {}
 
 class Car {
     public void makeSound() {

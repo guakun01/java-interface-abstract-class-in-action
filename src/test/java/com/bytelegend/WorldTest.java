@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.lang.reflect.Modifier;
 import java.util.stream.Stream;
 
 public class WorldTest {
@@ -25,6 +26,11 @@ public class WorldTest {
                         .allMatch(SoundMaker.class::isAssignableFrom));
         Assertions.assertTrue(
                 Stream.of(Cat.class, Fish.class).allMatch(Pet.class::isAssignableFrom));
+    }
+
+    @Test
+    public void petIsAbstract() {
+        Assertions.assertTrue(Modifier.isAbstract(Pet.class.getModifiers()));
     }
 
     @ParameterizedTest
@@ -44,7 +50,7 @@ public class WorldTest {
             })
     public void testOutput(
             String klass, String method, String expected, CaptureSystemOutput.OutputCapture capture)
-            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+            throws Exception {
         capture.expect(Matchers.containsString(expected));
         Object target =
                 World.objects.stream()
