@@ -49,7 +49,7 @@ Any changes to files other than the following files will be rejected:**
 在完成重构后，请尝试简化啰嗦的`everyFlyableObjectFly()`/`everySoundMakerMakeSound()`/`everyAnimalBreath()`方法，体会多态的好处。
 
 
-要求的继承体系如图所示。其中，圆圈I代表接口，实心圆圈C代表类，半空心圆圈C代表抽象类，绿色虚线代表实现接口，绿色实现代表继承父类。
+要求的继承体系如图所示。其中，圆圈I代表接口，实心圆圈C代表类，半空心圆圈C代表抽象类，绿色虚线代表实现接口，绿色实线代表继承父类。
 
 ![uml](https://raw.githubusercontent.com/ByteLegendQuest/java-interface-abstract-class-in-action/main/docs/uml.png)
 
