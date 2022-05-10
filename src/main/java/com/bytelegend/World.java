@@ -4,14 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class World {
-    public static List<Object> objects =
-            Arrays.asList(
-                    new Cat("Tom"),
-                    new Car(),
-                    new Bird(),
-                    new Fish("Nemo"),
-                    new Plane(),
-                    new Butterfly());
+    public static List<Object> objects = Arrays.asList(new Cat("Tom"), new Car(), new Bird(), new Fish("Nemo"), new Plane(), new Butterfly());
 
     /**
      * After refactoring, please try to simplify these messy method
@@ -20,12 +13,8 @@ public class World {
      */
     public static void everyFlyableObjectFly() {
         for (Object obj : objects) {
-            if (obj instanceof Butterfly) {
-                ((Butterfly) obj).fly();
-            } else if (obj instanceof Plane) {
-                ((Plane) obj).fly();
-            } else if (obj instanceof Bird) {
-                ((Bird) obj).fly();
+            if (obj instanceof Flyable) {
+                ((Flyable) obj).fly();
             }
         }
     }
@@ -37,12 +26,8 @@ public class World {
      */
     public static void everySoundMakerMakeSound() {
         for (Object obj : objects) {
-            if (obj instanceof Cat) {
-                ((Cat) obj).makeSound();
-            } else if (obj instanceof Car) {
-                ((Car) obj).makeSound();
-            } else if (obj instanceof Bird) {
-                ((Bird) obj).makeSound();
+            if (obj instanceof SoundMaker) {
+                ((SoundMaker) obj).makeSound();
             }
         }
     }
@@ -54,68 +39,61 @@ public class World {
      */
     public static void everyAnimalBreath() {
         for (Object obj : objects) {
-            if (obj instanceof Cat) {
-                ((Cat) obj).breath();
-            } else if (obj instanceof Bird) {
-                ((Bird) obj).breath();
-            } else if (obj instanceof Fish) {
-                ((Fish) obj).breath();
-            } else if (obj instanceof Butterfly) {
-                ((Butterfly) obj).breath();
+            if (obj instanceof Animal) {
+                ((Animal) obj).breath();
             }
         }
     }
 }
 
 interface Flyable {
-    void fly();
+    default void fly() {
+        System.out.println(this.getClass().getSimpleName() + " is flying");
+    }
 }
 
 interface Animal {
-    void breath();
+    default void breath() {
+        System.out.println(this.getClass().getSimpleName() + " is breathing");
+    }
 }
 
 interface SoundMaker {
     void makeSound();
 }
 
-class Pet {}
+abstract class Pet {
+    protected String name;
 
-class Car {
+    protected Pet(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Car implements SoundMaker {
     public void makeSound() {
         System.out.println("BEEP BEEP");
     }
 }
 
-class Bird {
-    public void breath() {
-        System.out.println("Bird is breathing");
-    }
-
-    public void fly() {
-        System.out.println("Bird is flying");
-    }
+class Bird implements Flyable, Animal, SoundMaker {
 
     public void makeSound() {
         System.out.println("Chirp Chirp");
     }
 }
 
-class Butterfly {
-    public void breath() {
-        System.out.println("Butterfly is breathing");
-    }
-
-    public void fly() {
-        System.out.println("Butterfly is flying");
-    }
+class Butterfly implements Animal, Flyable {
 }
 
-class Cat {
-    private final String name;
+class Cat extends Pet implements Animal, SoundMaker {
 
     public Cat(String name) {
-        this.name = name;
+        super(name);
     }
 
     public void breath() {
@@ -127,11 +105,10 @@ class Cat {
     }
 }
 
-class Fish {
-    private final String name;
+class Fish extends Pet implements Animal {
 
     public Fish(String name) {
-        this.name = name;
+        super(name);
     }
 
     public void breath() {
@@ -139,8 +116,5 @@ class Fish {
     }
 }
 
-class Plane {
-    public void fly() {
-        System.out.println("Plane is flying");
-    }
+class Plane implements Flyable {
 }
