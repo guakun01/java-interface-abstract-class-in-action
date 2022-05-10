@@ -47,15 +47,11 @@ public class World {
 }
 
 interface Flyable {
-    default void fly() {
-        System.out.println(this.getClass().getSimpleName() + " is flying");
-    }
+    void fly();
 }
 
 interface Animal {
-    default void breath() {
-        System.out.println(this.getClass().getSimpleName() + " is breathing");
-    }
+    void breath();
 }
 
 interface SoundMaker {
@@ -75,6 +71,7 @@ abstract class Pet {
 }
 
 class Car implements SoundMaker {
+    @Override
     public void makeSound() {
         System.out.println("BEEP BEEP");
     }
@@ -85,9 +82,28 @@ class Bird implements Flyable, Animal, SoundMaker {
     public void makeSound() {
         System.out.println("Chirp Chirp");
     }
+
+    @Override
+    public void fly() {
+        System.out.println("Bird is flying");
+    }
+
+    @Override
+    public void breath() {
+        System.out.println("Bird is breathing");
+    }
 }
 
 class Butterfly implements Animal, Flyable {
+    @Override
+    public void fly() {
+        System.out.println("Butterfly is flying");
+    }
+
+    @Override
+    public void breath() {
+        System.out.println("Butterfly is breathing");
+    }
 }
 
 class Cat extends Pet implements Animal, SoundMaker {
@@ -96,10 +112,12 @@ class Cat extends Pet implements Animal, SoundMaker {
         super(name);
     }
 
+    @Override
     public void breath() {
         System.out.println("Cat " + name + " is breathing");
     }
 
+    @Override
     public void makeSound() {
         System.out.println("Meow");
     }
@@ -111,10 +129,15 @@ class Fish extends Pet implements Animal {
         super(name);
     }
 
+    @Override
     public void breath() {
         System.out.println("Fish " + name + " is breathing");
     }
 }
 
 class Plane implements Flyable {
+    @Override
+    public void fly() {
+        System.out.println("Plane is flying");
+    }
 }
