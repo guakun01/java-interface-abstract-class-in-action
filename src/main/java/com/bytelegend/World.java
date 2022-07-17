@@ -20,12 +20,8 @@ public class World {
      */
     public static void everyFlyableObjectFly() {
         for (Object obj : objects) {
-            if (obj instanceof Butterfly) {
-                ((Butterfly) obj).fly();
-            } else if (obj instanceof Plane) {
-                ((Plane) obj).fly();
-            } else if (obj instanceof Bird) {
-                ((Bird) obj).fly();
+            if (obj instanceof Flyable) {
+                ((Flyable) obj).fly();
             }
         }
     }
@@ -37,12 +33,8 @@ public class World {
      */
     public static void everySoundMakerMakeSound() {
         for (Object obj : objects) {
-            if (obj instanceof Cat) {
-                ((Cat) obj).makeSound();
-            } else if (obj instanceof Car) {
-                ((Car) obj).makeSound();
-            } else if (obj instanceof Bird) {
-                ((Bird) obj).makeSound();
+            if (obj instanceof SoundMaker) {
+                ((SoundMaker) obj).makeSound();
             }
         }
     }
@@ -54,93 +46,137 @@ public class World {
      */
     public static void everyAnimalBreath() {
         for (Object obj : objects) {
-            if (obj instanceof Cat) {
-                ((Cat) obj).breath();
-            } else if (obj instanceof Bird) {
-                ((Bird) obj).breath();
-            } else if (obj instanceof Fish) {
-                ((Fish) obj).breath();
-            } else if (obj instanceof Butterfly) {
-                ((Butterfly) obj).breath();
+            if (obj instanceof Animal) {
+                ((Animal) obj).breath();
             }
         }
     }
 }
 
-interface Flyable {
-    void fly();
+interface NameOwner {
+    String getType();
 }
 
-interface Animal {
-    void breath();
+interface Flyable extends NameOwner {
+    default void fly() {
+        System.out.println(getType() + " is flying");
+    }
+}
+
+interface Animal extends NameOwner {
+    default void breath() {
+        System.out.println(getType() + " is breathing");
+    }
 }
 
 interface SoundMaker {
     void makeSound();
 }
 
-class Pet {}
+abstract class Pet implements Animal, NameOwner {
+    protected String name;
 
-class Car {
+    Pet(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void breath() {
+        System.out.println(getType() + " " + name + " is breathing");
+    }
+}
+
+class Car implements SoundMaker {
+    @Override
     public void makeSound() {
         System.out.println("BEEP BEEP");
     }
 }
 
-class Bird {
-    public void breath() {
-        System.out.println("Bird is breathing");
+class Bird implements Flyable, SoundMaker, Animal {
+    @Override
+    public String getType() {
+        return "Bird";
     }
 
-    public void fly() {
-        System.out.println("Bird is flying");
-    }
-
+    @Override
     public void makeSound() {
         System.out.println("Chirp Chirp");
     }
-}
 
-class Butterfly {
+    @Override
     public void breath() {
-        System.out.println("Butterfly is breathing");
+        Animal.super.breath();
     }
 
+    @Override
     public void fly() {
-        System.out.println("Butterfly is flying");
+        Flyable.super.fly();
     }
 }
 
-class Cat {
-    private final String name;
-
-    public Cat(String name) {
-        this.name = name;
+class Butterfly implements Animal, Flyable {
+    @Override
+    public String getType() {
+        return "Butterfly";
     }
 
+    @Override
     public void breath() {
-        System.out.println("Cat " + name + " is breathing");
+        Animal.super.breath();
     }
 
+    @Override
+    public void fly() {
+        Flyable.super.fly();
+    }
+}
+
+class Cat extends Pet implements SoundMaker {
+    public Cat(String name) {
+        super(name);
+    }
+
+    @Override
     public void makeSound() {
         System.out.println("Meow");
     }
-}
 
-class Fish {
-    private final String name;
-
-    public Fish(String name) {
-        this.name = name;
+    @Override
+    public String getType() {
+        return "Cat";
     }
 
+    @Override
     public void breath() {
-        System.out.println("Fish " + name + " is breathing");
+        super.breath();
     }
 }
 
-class Plane {
+class Fish extends Pet {
+    public Fish(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return "Fish";
+    }
+
+    @Override
+    public void breath() {
+        super.breath();
+    }
+}
+
+class Plane implements Flyable {
+    @Override
+    public String getType() {
+        return "Plane";
+    }
+
+    @Override
     public void fly() {
-        System.out.println("Plane is flying");
+        Flyable.super.fly();
     }
 }
