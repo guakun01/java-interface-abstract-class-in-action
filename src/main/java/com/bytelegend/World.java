@@ -81,13 +81,13 @@ interface SoundMaker {
 
 class Pet {}
 
-class Car {
+class Car implements SoundMaker{
     public void makeSound() {
         System.out.println("BEEP BEEP");
     }
 }
 
-class Bird {
+class Bird implements Flyable, Animal, SoundMaker{
     public void breath() {
         System.out.println("Bird is breathing");
     }
@@ -101,7 +101,7 @@ class Bird {
     }
 }
 
-class Butterfly {
+class Butterfly implements Flyable, Animal {
     public void breath() {
         System.out.println("Butterfly is breathing");
     }
@@ -111,7 +111,7 @@ class Butterfly {
     }
 }
 
-class Cat {
+class Cat extends Pet implements Animal, SoundMaker{
     private final String name;
 
     public Cat(String name) {
@@ -127,7 +127,7 @@ class Cat {
     }
 }
 
-class Fish {
+class Fish extends Pet implements Animal{
     private final String name;
 
     public Fish(String name) {
@@ -139,7 +139,7 @@ class Fish {
     }
 }
 
-class Plane {
+class Plane implements Flyable{
     public void fly() {
         System.out.println("Plane is flying");
     }
