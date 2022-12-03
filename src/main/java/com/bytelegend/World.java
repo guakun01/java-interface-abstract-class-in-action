@@ -79,15 +79,20 @@ interface SoundMaker {
     void makeSound();
 }
 
-class Pet {}
+abstract class Pet {
+    String name;
+    public Pet(String name){
+        this.name = name;
+    }
+}
 
-class Car {
+class Car implements SoundMaker{
     public void makeSound() {
         System.out.println("BEEP BEEP");
     }
 }
 
-class Bird {
+class Bird implements Flyable, Animal, SoundMaker{
     public void breath() {
         System.out.println("Bird is breathing");
     }
@@ -101,7 +106,7 @@ class Bird {
     }
 }
 
-class Butterfly {
+class Butterfly implements Flyable, Animal {
     public void breath() {
         System.out.println("Butterfly is breathing");
     }
@@ -111,11 +116,11 @@ class Butterfly {
     }
 }
 
-class Cat {
-    private final String name;
+class Cat extends Pet implements Animal, SoundMaker{
+
 
     public Cat(String name) {
-        this.name = name;
+        super(name);
     }
 
     public void breath() {
@@ -127,11 +132,11 @@ class Cat {
     }
 }
 
-class Fish {
-    private final String name;
+class Fish extends Pet implements Animal{
+
 
     public Fish(String name) {
-        this.name = name;
+        super(name);
     }
 
     public void breath() {
@@ -139,7 +144,7 @@ class Fish {
     }
 }
 
-class Plane {
+class Plane implements Flyable{
     public void fly() {
         System.out.println("Plane is flying");
     }
