@@ -34,8 +34,9 @@ public class World {
      */
     public static void everyFlyableObjectFly() {
         for (Object obj : objects) {
-            if (obj instanceof Flyable)
+            if (obj instanceof Flyable) {
                 ((Flyable) obj).fly();
+            }
         }
     }
 
@@ -46,8 +47,9 @@ public class World {
      */
     public static void everySoundMakerMakeSound() {
         for (Object obj : objects) {
-            if (obj instanceof SoundMaker)
+            if (obj instanceof SoundMaker) {
                 ((SoundMaker) obj).makeSound();
+            }
         }
     }
 
@@ -58,8 +60,9 @@ public class World {
      */
     public static void everyAnimalBreath() {
         for (Object obj : objects) {
-            if (obj instanceof Animal)
+            if (obj instanceof Animal) {
                 ((Animal) obj).breath();
+            }
         }
     }
 }
