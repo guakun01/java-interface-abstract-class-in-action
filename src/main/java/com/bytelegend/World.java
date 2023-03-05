@@ -4,7 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class World {
-    public static List<Object> objects = Arrays.asList(new Cat("Tom"), new Car(), new Bird(), new Fish("Nemo"), new Plane(), new Butterfly());
+    public static List<Object> objects =
+            Arrays.asList(
+                    new Cat("Tom"),
+                    new Car(),
+                    new Bird(),
+                    new Fish("Nemo"),
+                    new Plane(),
+                    new Butterfly());
 
     /**
      * After refactoring, please try to simplify these messy method
@@ -72,85 +79,67 @@ interface SoundMaker {
     void makeSound();
 }
 
-abstract class Pet {
-    private String name;
+class Pet {}
 
-    public Pet(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-
-class Car implements SoundMaker {
-
-    @Override
+class Car {
     public void makeSound() {
         System.out.println("BEEP BEEP");
     }
 }
 
-class Bird implements Animal, Flyable, SoundMaker {
-    @Override
+class Bird {
     public void breath() {
         System.out.println("Bird is breathing");
     }
 
-    @Override
     public void fly() {
         System.out.println("Bird is flying");
     }
 
-    @Override
     public void makeSound() {
         System.out.println("Chirp Chirp");
     }
 }
 
-class Butterfly implements Animal, Flyable {
-    @Override
+class Butterfly {
     public void breath() {
         System.out.println("Butterfly is breathing");
     }
 
-    @Override
     public void fly() {
         System.out.println("Butterfly is flying");
     }
 }
 
-class Cat extends Pet implements Animal, SoundMaker {
+class Cat {
+    private final String name;
+
     public Cat(String name) {
-        super(name);
+        this.name = name;
     }
 
-    @Override
     public void breath() {
-        System.out.println("Cat " + getName() + " is breathing");
+        System.out.println("Cat " + name + " is breathing");
     }
 
-    @Override
     public void makeSound() {
         System.out.println("Meow");
     }
 }
 
-class Fish extends Pet implements Animal {
+class Fish {
+    private final String name;
 
     public Fish(String name) {
-        super(name);
+        this.name = name;
     }
 
-    @Override
     public void breath() {
-        System.out.println("Fish " + getName() + " is breathing");
+        System.out.println("Fish " + name + " is breathing");
     }
 }
 
-class Plane implements Flyable {
-    @Override
+class Plane {
     public void fly() {
         System.out.println("Plane is flying");
     }
