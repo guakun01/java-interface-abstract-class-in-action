@@ -97,13 +97,13 @@ class Butterfly implements Animal, Flyable {
     }
 }
 
-class Cat extends Pet implements  SoundMaker {
+class Cat extends Pet implements SoundMaker {
     public Cat(String name) {
         super(name);
     }
 
     public void breath() {
-        System.out.println("Cat " + this.getName()+ " is breathing");
+        System.out.println("Cat " + this.getName() + " is breathing");
     }
 
     public void makeSound() {
@@ -111,7 +111,7 @@ class Cat extends Pet implements  SoundMaker {
     }
 }
 
-class Fish extends Pet  {
+class Fish extends Pet {
     public Fish(String name) {
         super(name);
     }
